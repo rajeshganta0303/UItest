@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationComplexData.Resources.Views.ClientsPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label
+            Text="Master Client List"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32"
+            HorizontalOptions="Center" />
+
+            <ListView x:Name="lstClients"  
+                  VerticalScrollBarVisibility="Always"
+                  HorizontalScrollBarVisibility="Always"
+                  ItemsSource="{Binding MasterClientsList}"
+                  ItemSelected="lstClients_ItemSelected"
+                  HeightRequest="300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ClientId}"  WidthRequest="50"/>
+                                <Label Text="{Binding ClientName}"  WidthRequest="200"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+ 
+</ContentPage>

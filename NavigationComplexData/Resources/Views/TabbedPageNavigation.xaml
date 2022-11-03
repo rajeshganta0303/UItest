@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:NavigationComplexData"
+            xmlns:views="clr-namespace:NavigationComplexData.Resources.Views"
+            x:Class="NavigationComplexData.Resources.Views.TabbedPageNavigation">
+    <local:MainPage Title="Home"/>
+    <views:TestingPage Title="Testing"/>
+    <views:ClientsPage Title="Clients"/>
+</TabbedPage>
